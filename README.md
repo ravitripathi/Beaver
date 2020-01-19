@@ -3,7 +3,7 @@
 [![GitHub release](https://img.shields.io/github/v/tag/ravitripathi/Beaver?label=release)](https://github.com/ravitripathi/Beaver/releases)
 [![License](https://img.shields.io/github/license/ravitripathi/Beaver)](https://raw.githubusercontent.com/ravitripathi/Beaver/master/LICENSE)
 <p align="center">
-<img align="middle" src="https://raw.githubusercontent.com/ravitripathi/Beaver/master/badcrop.png" width="250" height="250"/>
+<img align="middle" src="https://raw.githubusercontent.com/ravitripathi/Beaver/master/icon.png" width="250" height="250"/>
 </p>
 
 ## Beaver is an easy to use, file persistence micro-library for iOS
