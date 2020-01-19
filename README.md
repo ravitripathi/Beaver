@@ -2,6 +2,7 @@
 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GitHub release](https://img.shields.io/github/v/tag/ravitripathi/Beaver?label=release)](https://github.com/ravitripathi/Beaver/releases)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Beaver.svg)](https://img.shields.io/cocoapods/v/Beaver.svg)
 [![License](https://img.shields.io/github/license/ravitripathi/Beaver)](https://raw.githubusercontent.com/ravitripathi/Beaver/master/LICENSE)
 
 <p align="center">
