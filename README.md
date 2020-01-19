@@ -12,6 +12,12 @@
 
 Beaver allows you to store files in an elegant manner. An extension over Codable classes allows storing and retrieving JSON files with ease.
 
+## Installation
+
+Add the following line to your [Cartfile](https://github.com/Carthage/Carthage)
+
+```github "ravitripathi/Beaver"```
+
 ## Storing and Retrieving Data
 
 Storing files is as easy as calling :
@@ -25,7 +31,7 @@ Beaver.default.store(data: data, to: .documents, withFileName: "Filename") { (re
 And fetching files can be done by:
 
 ```swift
-Beaver.default.retrieve(withFileName "Filename", from directory: .documents) { (result) in
+Beaver.default.retrieve(withFileName: "Filename", from directory: .documents) { (result) in
     // Utilize the result callback if needed
 }
 ```
