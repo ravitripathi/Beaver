@@ -27,7 +27,7 @@ public extension Encodable {
     ///   - directory: The directory (.documents or .cache) for storing the file
     ///   - fileName: Name of the file, with extension
     ///   - result: [StorageResult](x-source-tag://StorageResult)
-    public func store(to directory: Beaver.Directory = .documents, withFileName fileName: String = "\(String(describing: Self.self)).json", completition:@escaping (_ result: StorageResult) -> () = { _ in }) {
+    func store(to directory: Beaver.Directory = .documents, withFileName fileName: String = "\(String(describing: Self.self)).json", completition:@escaping (_ result: StorageResult) -> () = { _ in }) {
         let url = Beaver.default.getURL(for: directory).appendingPathComponent(fileName, isDirectory: false)
         let encoder = JSONEncoder()
         do {

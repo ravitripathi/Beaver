@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     @IBAction func didTapStoreDetails(_ sender: UIButton) {
         userModel.store(to: .documents, withFileName: "Model") { (result) in
             if result.success {
-                self.statusLabel.text = "The json file was saved in \(result.filePath)"
+                self.statusLabel.text = "The json file was saved in \(result.filePath!)"
             } else {
                 self.statusLabel.text = result.errorMessage
             }
