@@ -14,9 +14,15 @@ Beaver allows you to store files in an elegant manner. An extension over Codable
 
 ## Installation
 
+### Carthage
 Add the following line to your [Cartfile](https://github.com/Carthage/Carthage)
 
 ```github "ravitripathi/Beaver"```
+
+### Cocoapods
+Add the following line to your [Podfile](https://cocoapods.org/pods/Beaver)
+
+```pod 'Beaver', '~> 1.1'```
 
 ## Storing and Retrieving Data
 
