@@ -19,63 +19,6 @@ public struct StorageResult {
     public var data: Data?
 }
 
-public extension Encodable {
-    /// Store an encodable object to specified directory
-    ///
-    /// - Parameters:
-    ///   - object: The encodable object to store
-    ///   - directory: The directory (.documents or .cache) for storing the file
-    ///   - fileName: Name of the file, with extension
-    ///   - result: [StorageResult](x-source-tag://StorageResult)
-    func store(to directory: Beaver.Directory = .documents, withFileName fileName: String = "\(String(describing: Self.self)).json", completition:@escaping (_ result: StorageResult) -> () = { _ in }) {
-        let url = Beaver.default.getURL(for: directory).appendingPathComponent(fileName, isDirectory: false)
-        let encoder = JSONEncoder()
-        do {
-            let data = try encoder.encode(self)
-            if FileManager.default.fileExists(atPath: url.path) {
-                try FileManager.default.removeItem(at: url)
-            }
-            FileManager.default.createFile(atPath: url.path, contents: data, attributes: nil)
-            let result = StorageResult(success: true, errorMessage: nil, filePath: url, data: data)
-            completition(result)
-        } catch {
-            let result = StorageResult(success: false, errorMessage: error.localizedDescription, filePath: nil, data: nil)
-            completition(result)
-        }
-    }
-}
-
-public extension Decodable {
-    /// Retrieve an encodable object from specified directory
-    ///
-    /// - Parameters:
-    ///   - fileName: Name of the file where object is stored
-    ///   - directory: The directory (.documents or .cache) where file is stored
-    ///   - type: Codable Model to be retrieved
-    ///   - result: [StorageResult](x-source-tag://StorageResult)
-    ///   - model: Parsed Model
-    mutating func retrieve(withFileName fileName: String = "\(String(describing: Self.self)).json", from directory: Beaver.Directory = .documents, completition:@escaping (_ result: StorageResult) -> () = { _ in }) {
-        let url = Beaver.default.getURL(for: directory).appendingPathComponent(fileName, isDirectory: false)
-        
-        if !FileManager.default.fileExists(atPath: url.path) {
-            completition(StorageResult(success: false, errorMessage: "File at path \(url.path) does not exist!", filePath: nil, data: nil))
-        }
-        
-        if let data = FileManager.default.contents(atPath: url.path) {
-            let decoder = JSONDecoder()
-            do {
-                let model = try decoder.decode(Self.self, from: data)
-                self = model
-                completition(StorageResult(success: true, errorMessage: nil, filePath: url, data: data))
-            } catch {
-                completition(StorageResult(success: false, errorMessage: error.localizedDescription, filePath: nil, data: nil))
-            }
-        } else {
-            completition(StorageResult(success: false, errorMessage: "No data at \(url.path)!", filePath: nil, data: nil))
-        }
-    }
-}
-
 public class Beaver {
     
     public static let `default` = Beaver()
@@ -180,7 +123,7 @@ public class Beaver {
     ///   - fileName: Name of the file
     ///   - directory: The [Directory](x-source-tag://Directory) where file is stored
     ///   - result: [StorageResult](x-source-tag://StorageResult)
-    public func retrieve(withFileName fileName: String, from directory: Beaver.Directory = .documents, completition:@escaping (_ result: StorageResult) -> ()) {
+    public func retrieve(withFileName fileName: String, from directory: Beaver.Directory = .documents, completition: (_ result: StorageResult) -> ()) {
         let url = getURL(for: directory).appendingPathComponent(fileName, isDirectory: false)
         if !FileManager.default.fileExists(atPath: url.path) {
             completition(StorageResult(success: false, errorMessage: "File at path \(url.path) does not exist!", filePath: nil, data: nil))
@@ -193,3 +136,49 @@ public class Beaver {
     
 }
 
+public extension Encodable {
+    /// Store an encodable object to specified directory
+    ///
+    /// - Parameters:
+    ///   - object: The encodable object to store
+    ///   - directory: The directory (.documents or .cache) for storing the file
+    ///   - fileName: Name of the file, with extension
+    ///   - result: [StorageResult](x-source-tag://StorageResult)
+    func store(to directory: Beaver.Directory = .documents, withFileName fileName: String = "\(String(describing: Self.self)).json", completition:@escaping (_ result: StorageResult) -> () = { _ in }) {
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(self)
+            Beaver.default.store(data: data, to: directory, withFileName: fileName, completition: completition)
+        } catch {
+            let result = StorageResult(success: false, errorMessage: error.localizedDescription, filePath: nil, data: nil)
+            completition(result)
+        }
+    }
+}
+
+public extension Decodable {
+    /// Retrieve an encodable object from specified directory
+    ///
+    /// - Parameters:
+    ///   - fileName: Name of the file where object is stored
+    ///   - directory: The directory (.documents or .cache) where file is stored
+    ///   - type: Codable Model to be retrieved
+    ///   - result: [StorageResult](x-source-tag://StorageResult)
+    ///   - model: Parsed Model
+    mutating func retrieve(withFileName fileName: String = "\(String(describing: Self.self)).json", from directory: Beaver.Directory = .documents, completition:@escaping (_ result: StorageResult) -> () = { _ in }) {
+        Beaver.default.retrieve(withFileName: fileName, from: directory) { (result) in
+            if result.success, let data = result.data {
+                let decoder = JSONDecoder()
+                do {
+                    let model = try decoder.decode(Self.self, from: data)
+                    self = model
+                    completition(result)
+                } catch {
+                    completition(StorageResult(success: false, errorMessage: error.localizedDescription, filePath: nil, data: nil))
+                }
+            } else if let url = result.filePath {
+                completition(StorageResult(success: false, errorMessage: "No data at \(url.path)!", filePath: nil, data: nil))
+            }
+        }
+    }
+}

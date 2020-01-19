@@ -12,6 +12,7 @@
 		411DB28223D4849F00C700F8 /* Beaver.h in Headers */ = {isa = PBXBuildFile; fileRef = 411DB27423D4849F00C700F8 /* Beaver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		411DB2B523D4861300C700F8 /* Beaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411DB2B423D4861300C700F8 /* Beaver.swift */; };
 		411DB2BB23D4887B00C700F8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 411DB2BA23D4887B00C700F8 /* README.md */; };
+		411DB2BF23D4958000C700F8 /* TestCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411DB2BE23D4958000C700F8 /* TestCodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		411DB28123D4849F00C700F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411DB2B423D4861300C700F8 /* Beaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beaver.swift; sourceTree = "<group>"; };
 		411DB2BA23D4887B00C700F8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		411DB2BE23D4958000C700F8 /* TestCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				411DB27F23D4849F00C700F8 /* BeaverTests.swift */,
 				411DB28123D4849F00C700F8 /* Info.plist */,
+				411DB2BE23D4958000C700F8 /* TestCodable.swift */,
 			);
 			path = BeaverTests;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411DB2BF23D4958000C700F8 /* TestCodable.swift in Sources */,
 				411DB28023D4849F00C700F8 /* BeaverTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
