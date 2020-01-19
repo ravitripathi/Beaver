@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,84 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeaverExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Stored User Details Will Appear Here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-Hf-eyF">
+                                <rect key="frame" x="8" y="238.5" width="398" height="615.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="Qx2-xu-U4w">
+                                <rect key="frame" x="16" y="107.5" width="382" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpz-oX-ZiD">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
+                                        <state key="normal" title="Store User Details"/>
+                                        <connections>
+                                            <action selector="didTapStoreDetails:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lhB-rz-uKz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sw-uC-fAe">
+                                        <rect key="frame" x="198" y="0.0" width="184" height="30"/>
+                                        <state key="normal" title="Fetch User Details"/>
+                                        <connections>
+                                            <action selector="didTapFetchDetails:" destination="BYZ-38-t0r" eventType="touchUpInside" id="InX-us-844"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beaver Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCs-Ui-ZTS">
+                                <rect key="frame" x="16" y="60" width="382" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atG-RC-gnD">
+                                <rect key="frame" x="356" y="198" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAQ-OQ-P2f">
+                                <rect key="frame" x="16" y="198" width="332" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BCs-Ui-ZTS" secondAttribute="trailing" constant="16" id="7IF-7V-Jul"/>
+                            <constraint firstItem="Qx2-xu-U4w" firstAttribute="top" secondItem="BCs-Ui-ZTS" secondAttribute="bottom" constant="20" id="8La-Ft-GdS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bVi-Hf-eyF" secondAttribute="trailing" constant="8" id="JSu-Ag-j0U"/>
+                            <constraint firstItem="qAQ-OQ-P2f" firstAttribute="top" secondItem="Qx2-xu-U4w" secondAttribute="bottom" constant="60.5" id="QHe-5Z-FMc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bVi-Hf-eyF" secondAttribute="bottom" constant="8" id="ST1-Wy-s9K"/>
+                            <constraint firstItem="Qx2-xu-U4w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="T8C-PL-Vqc"/>
+                            <constraint firstItem="atG-RC-gnD" firstAttribute="leading" secondItem="qAQ-OQ-P2f" secondAttribute="trailing" constant="8" id="Uod-dN-PcN"/>
+                            <constraint firstItem="bVi-Hf-eyF" firstAttribute="top" secondItem="qAQ-OQ-P2f" secondAttribute="bottom" constant="20" id="VpN-dO-jrC"/>
+                            <constraint firstItem="atG-RC-gnD" firstAttribute="centerY" secondItem="qAQ-OQ-P2f" secondAttribute="centerY" id="ces-6E-Mmy"/>
+                            <constraint firstItem="BCs-Ui-ZTS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="duX-0l-rQQ"/>
+                            <constraint firstItem="BCs-Ui-ZTS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="l5G-Xl-DrI"/>
+                            <constraint firstItem="qAQ-OQ-P2f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="n5u-Nt-qXM"/>
+                            <constraint firstItem="bVi-Hf-eyF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="nE3-Up-7fL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="atG-RC-gnD" secondAttribute="trailing" constant="16" id="ne6-SI-NDL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qx2-xu-U4w" secondAttribute="trailing" constant="16" id="ufI-g9-nUn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="jsonDisplayTextField" destination="bVi-Hf-eyF" id="qMd-4k-oOp"/>
+                        <outlet property="statusLabel" destination="atG-RC-gnD" id="fle-yA-lZn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </scene>
     </scenes>
 </document>

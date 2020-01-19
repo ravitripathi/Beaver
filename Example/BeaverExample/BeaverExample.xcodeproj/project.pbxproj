@@ -12,6 +12,9 @@
 		411DB29F23D4855A00C700F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411DB29D23D4855A00C700F8 /* Main.storyboard */; };
 		411DB2A123D4855C00C700F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 411DB2A023D4855C00C700F8 /* Assets.xcassets */; };
 		411DB2A423D4855C00C700F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411DB2A223D4855C00C700F8 /* LaunchScreen.storyboard */; };
+		411DB2B723D4878100C700F8 /* Beaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411DB2B123D4860100C700F8 /* Beaver.framework */; };
+		411DB2B823D4878100C700F8 /* Beaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 411DB2B123D4860100C700F8 /* Beaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		411DB2BD23D488A400C700F8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411DB2BC23D488A400C700F8 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		411DB2B923D4878100C700F8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				411DB2B823D4878100C700F8 /* Beaver.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		411DB29423D4855A00C700F8 /* BeaverExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaverExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		411DB29723D4855A00C700F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +57,7 @@
 		411DB2A323D4855C00C700F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		411DB2A523D4855C00C700F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411DB2AB23D4860100C700F8 /* Beaver.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Beaver.xcodeproj; path = ../../Beaver/Beaver.xcodeproj; sourceTree = "<group>"; };
+		411DB2BC23D488A400C700F8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411DB2B723D4878100C700F8 /* Beaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +78,7 @@
 				411DB29623D4855A00C700F8 /* BeaverExample */,
 				411DB2AB23D4860100C700F8 /* Beaver.xcodeproj */,
 				411DB29523D4855A00C700F8 /* Products */,
+				411DB2B623D4878100C700F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +99,7 @@
 				411DB2A023D4855C00C700F8 /* Assets.xcassets */,
 				411DB2A223D4855C00C700F8 /* LaunchScreen.storyboard */,
 				411DB2A523D4855C00C700F8 /* Info.plist */,
+				411DB2BC23D488A400C700F8 /* UserModel.swift */,
 			);
 			path = BeaverExample;
 			sourceTree = "<group>";
@@ -92,6 +113,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		411DB2B623D4878100C700F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +130,7 @@
 				411DB29023D4855A00C700F8 /* Sources */,
 				411DB29123D4855A00C700F8 /* Frameworks */,
 				411DB29223D4855A00C700F8 /* Resources */,
+				411DB2B923D4878100C700F8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				411DB29C23D4855A00C700F8 /* ViewController.swift in Sources */,
+				411DB2BD23D488A400C700F8 /* UserModel.swift in Sources */,
 				411DB29823D4855A00C700F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -317,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
