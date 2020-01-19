@@ -7,7 +7,7 @@ s.name = "Beaver"
 s.summary = "File and Codable objects persistence micro-library for iOS"
 s.requires_arc = true
 s.framework = 'XCTest'
-s.version = "1.1"
+s.version = "1.2.1"
 
 s.license = { :type => "MIT", :file => "LICENSE" }
 
