@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4115E38423D4A85100A84A93 /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4115E38323D4A85100A84A93 /* CodableExtensions.swift */; };
 		411DB27B23D4849F00C700F8 /* Beaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411DB27123D4849F00C700F8 /* Beaver.framework */; };
 		411DB28023D4849F00C700F8 /* BeaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411DB27F23D4849F00C700F8 /* BeaverTests.swift */; };
 		411DB28223D4849F00C700F8 /* Beaver.h in Headers */ = {isa = PBXBuildFile; fileRef = 411DB27423D4849F00C700F8 /* Beaver.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4115E38323D4A85100A84A93 /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
 		411DB27123D4849F00C700F8 /* Beaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Beaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		411DB27423D4849F00C700F8 /* Beaver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Beaver.h; sourceTree = "<group>"; };
 		411DB27523D4849F00C700F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				411DB27423D4849F00C700F8 /* Beaver.h */,
 				411DB27523D4849F00C700F8 /* Info.plist */,
 				411DB2B423D4861300C700F8 /* Beaver.swift */,
+				4115E38323D4A85100A84A93 /* CodableExtensions.swift */,
 			);
 			path = Beaver;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4115E38423D4A85100A84A93 /* CodableExtensions.swift in Sources */,
 				411DB2B523D4861300C700F8 /* Beaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
