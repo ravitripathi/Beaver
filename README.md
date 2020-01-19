@@ -71,12 +71,13 @@ An object for this class can be stored directly:
 And for retrieval:
 
 ```swift
-userModel.retrieve(withFileName: "Model", from: .documents) { (result) in
+userModel.retrieve(withFileName: "CurrentUser", from: .documents) { (result) in
             if result.success {
-                self.statusLabel.text = "Retrieved JSON!"
-                self.jsonDisplayTextField.text = result.data?.prettyPrintedJSONString as String?
+                //Utilize the retrived data via result.data 
             } else {
-                self.statusLabel.text = result.errorMessage
+                print(result.errorMessage))
             }
         }
 ```
+
+By calling ```yourCodableObject.store()``` directly, the contents of the object are stored in a file named ```yourCodableClass``` in the documents directory, which can then be retrieved later by calling ```yourCodableObject.retrieve()``` directly.
