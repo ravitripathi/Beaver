@@ -10,6 +10,7 @@
 		411DB27B23D4849F00C700F8 /* Beaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411DB27123D4849F00C700F8 /* Beaver.framework */; };
 		411DB28023D4849F00C700F8 /* BeaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411DB27F23D4849F00C700F8 /* BeaverTests.swift */; };
 		411DB28223D4849F00C700F8 /* Beaver.h in Headers */ = {isa = PBXBuildFile; fileRef = 411DB27423D4849F00C700F8 /* Beaver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		411DB2B523D4861300C700F8 /* Beaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411DB2B423D4861300C700F8 /* Beaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		411DB27A23D4849F00C700F8 /* BeaverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		411DB27F23D4849F00C700F8 /* BeaverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaverTests.swift; sourceTree = "<group>"; };
 		411DB28123D4849F00C700F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		411DB2B423D4861300C700F8 /* Beaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				411DB27423D4849F00C700F8 /* Beaver.h */,
 				411DB27523D4849F00C700F8 /* Info.plist */,
+				411DB2B423D4861300C700F8 /* Beaver.swift */,
 			);
 			path = Beaver;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					411DB27023D4849F00C700F8 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					411DB27923D4849F00C700F8 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -195,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411DB2B523D4861300C700F8 /* Beaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +345,7 @@
 		411DB28623D4849F00C700F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FABQJ9SY29;
@@ -357,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ravitripathi.github.io.Beaver;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +372,7 @@
 		411DB28723D4849F00C700F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FABQJ9SY29;
@@ -390,6 +398,7 @@
 		411DB28923D4849F00C700F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FABQJ9SY29;
 				INFOPLIST_FILE = BeaverTests/Info.plist;
@@ -408,6 +417,7 @@
 		411DB28A23D4849F00C700F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FABQJ9SY29;
 				INFOPLIST_FILE = BeaverTests/Info.plist;

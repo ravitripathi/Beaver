@@ -14,6 +14,23 @@
 		411DB2A423D4855C00C700F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 411DB2A223D4855C00C700F8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		411DB2B023D4860100C700F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411DB2AB23D4860100C700F8 /* Beaver.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 411DB27123D4849F00C700F8;
+			remoteInfo = Beaver;
+		};
+		411DB2B223D4860100C700F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411DB2AB23D4860100C700F8 /* Beaver.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 411DB27A23D4849F00C700F8;
+			remoteInfo = BeaverTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		411DB29423D4855A00C700F8 /* BeaverExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaverExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		411DB29723D4855A00C700F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +39,7 @@
 		411DB2A023D4855C00C700F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		411DB2A323D4855C00C700F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		411DB2A523D4855C00C700F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		411DB2AB23D4860100C700F8 /* Beaver.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Beaver.xcodeproj; path = ../../Beaver/Beaver.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				411DB29623D4855A00C700F8 /* BeaverExample */,
+				411DB2AB23D4860100C700F8 /* Beaver.xcodeproj */,
 				411DB29523D4855A00C700F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +81,15 @@
 				411DB2A523D4855C00C700F8 /* Info.plist */,
 			);
 			path = BeaverExample;
+			sourceTree = "<group>";
+		};
+		411DB2AC23D4860100C700F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				411DB2B123D4860100C700F8 /* Beaver.framework */,
+				411DB2B323D4860100C700F8 /* BeaverTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,12 +138,35 @@
 			mainGroup = 411DB28B23D4855A00C700F8;
 			productRefGroup = 411DB29523D4855A00C700F8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 411DB2AC23D4860100C700F8 /* Products */;
+					ProjectRef = 411DB2AB23D4860100C700F8 /* Beaver.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				411DB29323D4855A00C700F8 /* BeaverExample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		411DB2B123D4860100C700F8 /* Beaver.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Beaver.framework;
+			remoteRef = 411DB2B023D4860100C700F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		411DB2B323D4860100C700F8 /* BeaverTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = BeaverTests.xctest;
+			remoteRef = 411DB2B223D4860100C700F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		411DB29223D4855A00C700F8 /* Resources */ = {
